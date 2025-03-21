@@ -1,0 +1,48 @@
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+#FRONTEND
+# Compiled output
+ecom-proj/dist
+ecom-proj/tmp
+ecom-proj/out-tsc
+ecom-proj/bazel-out
+
+# Node
+ecom-proj/node_modules
+npm-debug.log
+yarn-error.log
+
+# IDEs and editors
+ecom-proj/.idea/
+ecom-proj/.project
+ecom-proj/.classpath
+ecom-proj/.c9/
+ecom-proj/*.launch
+ecom-proj/.settings/
+ecom-proj/*.sublime-workspace
+
+# Visual Studio Code
+ecom-proj/.vscode/*
+ecom-proj/!.vscode/settings.json
+ecom-proj/!.vscode/tasks.json
+ecom-proj/!.vscode/launch.json
+ecom-proj/!.vscode/extensions.json
+ecom-proj/.history/*
+
+# Miscellaneous
+ecom-proj/.angular/cache
+ecom-proj/.sass-cache/
+ecom-proj/connect.lock
+ecom-proj/coverage
+ecom-proj/libpeerconnection.log
+ecom-proj/testem.log
+ecom-proj/typings
+
+# System files
+ecom-proj/.DS_Store
+ecom-proj/Thumbs.db
+
+ecom-proj/.env
+
+#BACKEND
+ecom-proj-server/node_modules
+ecom-proj-server/.env

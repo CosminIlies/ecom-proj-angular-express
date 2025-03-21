@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="filters">
+        <app-filter title="Brand" [options]="['Samsung', 'Apple', 'Lenovo']"/>
+        <app-filter title="Price" [options]="['Sub500', '500-2500', 'Over2500']"/>
+        <app-filter title="Camera" [options]="['Sub10Mp', '10-19Mp', '20-30Mp', 'Over30Mp']"/>
+        <app-filter title="Color" [options]="['White', 'Black', 'Silver', 'Gold', 'Red', 'Blue']"/>
+        
+        
+        
+    </div>
+    <div class="products">
+        <p *ngIf="filteredProducts.searchedText != ''" (click)="filteredProducts.searchedText=''; filteredProducts.updateFilters()">X You searched for {{filteredProducts.searchedText}}.</p>
+        <div class="profuctsGrid">
+            <app-product *ngFor="let product of filteredProducts.products" [product]="product"></app-product>
+        </div>
+        <div class="page">
+            <button class="prev" *ngIf="page() - 1 > 0" (click)="changePage(page() - 1)">Previous</button>
+            <button class="num" *ngIf="page() - 2 > 0" (click)="changePage(page() - 2 )">{{page()-2}}</button>
+            <button class="num" *ngIf="page() - 1 > 0" (click)="changePage(page()  - 1)">{{page()-1}}</button>
+            <div class="current">{{page()}}</div>
+            <button class="num" *ngIf="(page()) * onPage <= filteredProducts.products.length" (click)="changePage(page() + 1)" >{{page() + 1}}</button>
+            <button class="num" *ngIf="(page() + 1) * onPage <= filteredProducts.products.length" (click)="changePage(page() + 2)">{{page() + 2}}</button>
+            <button class="next" *ngIf="(page()) * onPage <= filteredProducts.products.length" (click)="changePage(page() +1)">Next</button>
+        </div>
+    </div>
+
+</div>

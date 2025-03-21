@@ -1,0 +1,88 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Cart</h1>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of cartItems">
+                        <td>{{ item.product.name }}</td>
+                        <td>{{ item.product.price | currency }}</td>
+                        <td><input type="number" [value]="item.quantity"/></td>
+                        <td>{{ item.product.price * item.quantity | currency }}</td>
+                        <td>
+                            <button class="btn btn-danger" (click)="removeFromCart(item.product.id)">
+                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/>
+                              </svg>
+                              </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>name</td>
+                        <td>{{ 150 | currency }}</td>
+                        <td><input type="number" value="123"/></td>
+                        <td>{{ 20 * 150 | currency }}</td>
+                        <td>
+                            <button class="btn btn-danger" (click)="removeFromCart('5')">
+                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/>
+                              </svg>
+                              </button>
+                        </td>
+                    </tr> <tr>
+                        <td>name</td>
+                        <td>{{ 150 | currency }}</td>
+                        <td><input type="number" value="123"/></td>
+                        <td>{{ 20 * 150 | currency }}</td>
+                        <td>
+                            <button class="btn btn-danger" (click)="removeFromCart('5')">
+                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/>
+                              </svg>
+                              </button>
+                        </td>
+                    </tr> <tr>
+                        <td>name</td>
+                        <td>{{ 150 | currency }}</td>
+                        <td><input type="number" value="123"/></td>
+                        <td>{{ 20 * 150 | currency }}</td>
+                        <td>
+                            <button class="btn btn-danger" (click)="removeFromCart('5')">
+                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/>
+                              </svg>
+                              </button>
+                        </td>
+                    </tr> <tr>
+                        <td>name</td>
+                        <td>{{ 150 | currency }}</td>
+                        <td><input type="number" value="123"/></td>
+                        <td>{{ 20 * 150 | currency }}</td>
+                        <td>
+                            <button class="btn btn-danger" (click)="removeFromCart('5')">
+                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/>
+                              </svg>
+                              </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="cta">
+                <h3>Total: {{ total | currency }}</h3>
+                <button class="btn btn-primary" (click)="checkout()">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+</div>

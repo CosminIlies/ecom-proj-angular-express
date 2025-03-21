@@ -1,0 +1,46 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:50px;
+    width:500px;
+    background: linear-gradient(to right, #f3df28, #b405ef);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+
+    svg{
+        color:whitesmoke;
+    }
+}
+
+
+input{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    color:whitesmoke;
+    border-radius: 5px;
+    font-size: 16px;
+    padding-left: 15px;
+    background-color: transparent;
+    border: none;
+
+    &:focus{
+        outline: none;
+    }
+}
+button{
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 5px;
+
+
+
+    &:focus{
+        outline: none;
+    }
+}
